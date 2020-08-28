@@ -1,3 +1,12 @@
+//Business Logic
+function PizzaObject() {
+  this.toppings = [];
+  this.size = [];
+}
+
+//UI logic
 $(document).ready(function() {
-event.preventDefault();
+  $("#form").submit(function(event){
+    event.preventDefault();
+  });
 })
