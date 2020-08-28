@@ -10,9 +10,9 @@ __
 
 ## Specs
 
-* Spec: Allow the user to choose from dropdown menu to select toppings.
-  * Input: The user selects pepperoni
-  * Output: Pepperoni is shown as a selected item.
+* Spec: Allow the user to choose from a size option.
+  * Input: The user selects 'small'
+  * Output: price increased by 12
 
 ## Setup/Installation Requirements
 
