@@ -14,6 +14,18 @@ __
   * Input: The user selects 'small'
   * Output: price increased by 12
 
+* Spec: Allow the user to choose from a sauce option.
+  * Input: The user selects 'marinara'
+  * Output: price increased by 0
+
+* Spec: Allow the user to choose from a list of toppings.
+  * Input: The user selects 'mushrooms'
+  * Output: price increased by 0.50
+
+* Spec: The user has made all selections for their pizza. Calculate total cost.
+  * Input: Medium/Alfredo/+Mushrooms, +Olives, +Bell Peppers
+  * Output: Total cost: 14 + 2 + .50 + .50 + .50 = $13.50
+
 ## Setup/Installation Requirements
 
 * _In your web browser, navigate to [dcole505 pizza-parlor repository](https://github.com/dcole505/pizza-parlor)_
