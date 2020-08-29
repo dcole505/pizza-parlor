@@ -1,7 +1,49 @@
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
 .jumbotron {
+  background-image: url(../img/flag.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: auto;
   text-align: center;
+  color: black;
 }
 
 .user-pizza {
   margin-bottom: 50px;
+}
+
+.container {
+  display: block;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+button {
+  margin: 25px;
+}
+
+#box-art {
+  height: 340px;
+  width: 480px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#display-result {
+  display: none;
+  text-align: center;
 }

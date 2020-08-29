@@ -46,6 +46,12 @@ $(document).ready(function() {
     userPizza.sizeCalc();
     userPizza.sauceCalc();
     userPizza.toppingCalc();
-    console.log(userPizza.price);
+    
+    $("#input-form").hide();
+    $("#price").append("<p>That's a good lookin' pie. That's gonna be: $" + userPizza.price.toFixed(2) + ". Give us around 30-45 minutes </P>" );
+    $("#display-result").show();
+    $("#refresh").click(function(){
+      location.reload();
+    })
   });
-})
+});

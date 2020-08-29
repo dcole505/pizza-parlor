@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Pizza Parlor</title>
   </head>
   <body>
     <div class="jumbotron">
-      <h1 class="display-2">Original Dave's Pizza</h1>
-      <p class="lead">"Just like my momma used to make!"</p>
+      <h1 class="display-2">Panucci's Pizza</h1>
+      <p class="lead">"Do not tip delivery boy!"</p>
     </div>
-    <div class="container">
+    <div class="container" id="input-form">
       <form id="pizza-options">
         <div class="user-pizza">
-          <p>What size pie we talking?</p>
+          <p>What size pie we talking? C'mon!</p>
           <select id="size" name="size">
-            <option value="small">Small - $12</option>
+            <option value="small" selected>Small - $12</option>
             <option value="medium">Medium - $14</option>
             <option value="large">Large - $16</option>
             <option value="extra-large">XL - $18</option>
           </select>
         </div>
         <div class="user-pizza">
-          <p>What kind of sauce you want with that?</p>
+          <p>What kind of sauce you want with that? C'mon!</p>
           <select id="sauce" name="sauce">
             <option value="no-sauce">No Sauce</option>
-            <option value="marinara">Marinara</option>
+            <option value="marinara" selected>Marinara</option>
             <option value="alfredo">Alfredo +$1.50</option>
             <option value="pesto">Pesto +$1.50</option>
           </select>
         </div>
-        <p>What all you want on that there pie?</p>
+        <p>What all you want on that there pie? C'mon!</p>
         <div class="form-check">
           <input class="form-check-input" id="check1" type="checkbox" name="topping" value="pepperoni">
           <label class="form-check-label" for="check1">
@@ -90,13 +91,15 @@
           </label>
         </div>
         <div class="text-center">
-          <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+          <button id="submit-form" class="btn btn-success btn-lg" type="submit">Submit</button>
         </div>
       </form>
-
-      <div id="display">
-
+    </div>
+    <div class="container-fluid" id="display-result">
+      <div class="card" id="price">
+        <img id="box-art" class="card-img-top" src="img/box-art.jpg" alt="Panucci's Pizza">
       </div>
+      <button id="refresh" class="btn btn-danger btn-lg" type="submit">Start Over</button>
     </div>
   </body>
 </html>

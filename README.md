@@ -20,11 +20,11 @@ __
 
 * Spec: Allow the user to choose from a list of toppings.
   * Input: The user selects 'mushrooms'
-  * Output: price increased by 0.50
+  * Output: price increased by 1.50
 
 * Spec: The user has made all selections for their pizza. Calculate total cost.
   * Input: Medium/Alfredo/+Mushrooms, +Olives, +Bell Peppers
-  * Output: Total cost: 14 + 2 + .50 + .50 + .50 = $13.50
+  * Output: Total cost: 14 + 2 + 1.50 + 1.50 + 1.50 = $20.50
 
 ## Setup/Installation Requirements
 
