@@ -9,17 +9,25 @@ function Pizza(size, sauce) {
 Pizza.prototype.sizeCalc (size => {
   switch (this.size) {
     case 'small':
-      price += 12;
+      this.price += 12;
       break;
     case 'medium':
-      price += 14;
+      this.price += 14;
       break;
     case 'large':
-      price += 16;
+      this.price += 16;
       break;
     case 'xl':
-      price += 18;
+      this.price += 18;
       break;
+    default:
+      alert("Please select a valid size option");
+  }
+});
+
+Pizza.prototype.sauceCalc (sauce => {
+  if (this.sauce === "alfredo" || this.sauce === "pesto") {
+    this.price += 1.50;
   }
 });
 
@@ -27,5 +35,6 @@ Pizza.prototype.sizeCalc (size => {
 $(document).ready(function() {
   $("#form").submit(function(event){
     event.preventDefault();
+    userPizza = new Pizza();
   });
 })
