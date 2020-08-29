@@ -31,10 +31,18 @@ Pizza.prototype.sauceCalc (sauce => {
   }
 });
 
+Pizza.prototype.toppingCalc () {
+  this.price += (this.toppings.length * 1.50);
+}
+
 //UI logic
 $(document).ready(function() {
   $("#form").submit(function(event){
     event.preventDefault();
-    userPizza = new Pizza();
+    userPizza = new Pizza($("#size").val(), $("#sauce").val());
+
+    $("input:checkbox[name=topping]:checked").each(function(){
+      userPizza.toppings.push($(this).val());
+    })
   });
 })
