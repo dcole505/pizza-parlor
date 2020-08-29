@@ -6,7 +6,7 @@ function Pizza(size, sauce) {
   this.price = 0;
 }
 
-Pizza.prototype.sizeCalc (size => {
+Pizza.prototype.sizeCalc = function() {
   switch (this.size) {
     case 'small':
       this.price += 12;
@@ -20,29 +20,32 @@ Pizza.prototype.sizeCalc (size => {
     case 'xl':
       this.price += 18;
       break;
-    default:
-      alert("Please select a valid size option");
   }
-});
+};
 
-Pizza.prototype.sauceCalc (sauce => {
+Pizza.prototype.sauceCalc = function() {
   if (this.sauce === "alfredo" || this.sauce === "pesto") {
     this.price += 1.50;
   }
-});
+};
 
-Pizza.prototype.toppingCalc () {
+Pizza.prototype.toppingCalc = function() {
   this.price += (this.toppings.length * 1.50);
-}
+};
 
 //UI logic
 $(document).ready(function() {
-  $("#form").submit(function(event){
+  $("#pizza-options").submit(function(event){
     event.preventDefault();
     userPizza = new Pizza($("#size").val(), $("#sauce").val());
 
     $("input:checkbox[name=topping]:checked").each(function(){
       userPizza.toppings.push($(this).val());
     })
+
+    userPizza.sizeCalc();
+    userPizza.sauceCalc();
+    userPizza.toppingCalc();
+    console.log(userPizza.price);
   });
 })
