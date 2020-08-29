@@ -47,3 +47,7 @@ button {
   display: none;
   text-align: center;
 }
+
+#refresh {
+  display: none;
+}

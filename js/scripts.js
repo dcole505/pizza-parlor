@@ -33,6 +33,13 @@ Pizza.prototype.toppingCalc = function() {
   this.price += (this.toppings.length * 1.50);
 };
 
+Pizza.prototype.display = function() {
+  $(".size-output").text(this.size);
+  $(".sauce-output").text(this.sauce);
+  $(".toppings-output").text(this.toppings);
+  $("#display-result").append("<p>That's a good lookin' pie. That's gonna be: $" + userPizza.price.toFixed(2) + ". Give us around 30-45 minutes </P>" );
+}
+
 //UI logic
 $(document).ready(function() {
   $("#pizza-options").submit(function(event){
@@ -46,10 +53,12 @@ $(document).ready(function() {
     userPizza.sizeCalc();
     userPizza.sauceCalc();
     userPizza.toppingCalc();
+    userPizza.display();
     
     $("#input-form").hide();
-    $("#price").append("<p>That's a good lookin' pie. That's gonna be: $" + userPizza.price.toFixed(2) + ". Give us around 30-45 minutes </P>" );
     $("#display-result").show();
+    $("#refresh").show();
+
     $("#refresh").click(function(){
       location.reload();
     })
